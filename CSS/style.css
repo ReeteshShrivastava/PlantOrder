@@ -17,6 +17,17 @@ body {
   flex-direction: column;
   gap: 0.5rem;
 }
+#popup{
+  display: none;
+  position: absolute;
+  background-color: rgb(60, 61, 61);
+  text-align: left;
+  margin: 0.5rem 0 auto auto;
+  padding: 1rem;
+  left: 65%;
+  opacity: 0.7;
+  color: #fff;
+}
 
 #Mcatlog,
 #Ccatlog,
