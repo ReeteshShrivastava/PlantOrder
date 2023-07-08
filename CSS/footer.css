@@ -17,11 +17,13 @@ footer>div{
     /* Styles for small screens */
     footer{
         display: grid;
+        column-gap: 1.5rem;
         grid-template-columns: repeat(2,1fr);
     }
     footer>div{
         display: flex;
         flex-direction: column;
+        width: 50%;
     }
   }
   

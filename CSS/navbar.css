@@ -29,15 +29,57 @@ nav #item{
     border-bottom: 1px solid gray;
     /* display: none; */
 }
-nav #search{
+nav button{
     background-color: #fff;
     border: none;
 }
 
-nav>div:first-of-type a{
+nav #logo{
     color: rgb(71, 108, 0);
     font-size: larger;
 }
 nav i{
     color: rgb(57, 55, 55);
 }
+
+@media only screen and (max-width: 750px) {
+    /* Styles for small screens */
+    nav{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 1rem 7%;
+        background-color: #f8f8f7;
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+        height: fit-content;
+        align-items: center;
+        
+    }
+
+    nav>div{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav>div:first-child{
+        border-bottom: 1.5px solid lightgray;
+        margin-bottom: 1rem;
+    }
+
+    nav #respnav{
+        flex-direction: column;
+        row-gap: 5px;
+        width: 40%;
+        margin-left: 60%;
+        display: none;
+    }
+
+    nav #respnav p{
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 0.5rem;
+        
+    }
+  }

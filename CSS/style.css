@@ -17,6 +17,9 @@ body {
   flex-direction: column;
   gap: 0.5rem;
 }
+#navbar{
+  display: none;
+}
 #popup{
   display: none;
   position: absolute;
@@ -40,7 +43,7 @@ body {
 }
 #main {
   display: flex;
-  width: 100%;
+  width: fit-content;
   gap: 4%;
   height: fit-content;
   padding: 0 0 3rem;
@@ -76,24 +79,24 @@ body {
 }
 
 #popular{
-    margin: 2rem 6% ;
+    margin: -0.5rem 6% -1.5rem;
 }
 
 #popular>div:first-child{
-    margin: 1rem 0;
+    margin: 1rem 0 0;
     align-items: center;
 }
 #popular>div:first-child>div{
     gap: 2rem;
 }
 #popular>div:nth-child(2) img{
-    height: 350px;
-    width: 330px;
+    width: 100%;
+    height: 80%;
 }
 
 
 #categories{
-    margin: 3rem 6%;
+    margin: 0 6%;
 }
 #categories>div:first-child{
     height: 5rem;
@@ -101,7 +104,11 @@ body {
     align-items: center;
 }
 #categories>div:nth-child(2) img{
-    width: 94%;
+    width: 100%;
+    height: 80%;
+}
+#categories>div:nth-child(2) div{
+  width: 25%;
 }
 
 
@@ -125,6 +132,11 @@ body {
   #social{
     margin: 0 6%;
   }
+  #social>div:nth-child(2)>img{
+    width: 30%;
+    height: 20rem;
+  }
+
   #social button{
     height: 2.5rem;
     width: 20%;
@@ -134,4 +146,97 @@ body {
     font-size: larger;
     font-weight: 400;
     margin: auto 0;
+  }
+
+  @media only screen and (max-width: 750px) {
+    /* Styles for small screens */
+    body{
+      width: 100%;
+    }
+    #main{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 1rem;
+    }
+
+    #main > div {
+      width: 93%;
+      justify-self: center;
+    }
+
+    #about{
+      display: flex;
+      flex-direction: column-reverse;
+      margin:1rem  7%;
+    }
+    #about>div{
+      width: 100%;
+    }
+    #popular>div:nth-child(2)>div:last-child{
+      display: none;
+    }
+    #popular>div:nth-child(2) img{
+      height: 100%;
+    }
+
+    #categories{
+      margin-top: 3rem;
+    }
+    
+    #categories>div:first-child img{
+      width: 60%;
+
+    }
+
+    #categories>div:nth-child(2){
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    #categories>div:nth-child(2) div{
+      width: 100%;
+    }
+
+    #delivery{
+      display: flex;
+      flex-direction: column-reverse;
+      margin:1rem  7%;
+      gap: 1.5rem;
+    }
+    #delivery>div{
+      width: 100%;
+    }
+
+    #social>div:nth-child(2)>img:nth-child(3){
+      display: none;
+    }
+    #social>div:nth-child(2)>img{
+      width: 50%;
+      height: 12rem;
+    }
+    #social>div:nth-child(2){
+      margin-top: 1.5rem;
+    }
+    #social button{
+      width: fit-content;
+    }
+
+    #popup{
+      display: none;
+      position: absolute;
+      background-color: rgb(60, 61, 61);
+      text-align: left;
+      margin: 0.5rem 1rem auto auto;
+      padding: 1rem;
+      width: 100%;
+      left: 50%;
+      opacity: 0.7;
+      color: #fff;
+    }
+    #navbar{
+      display: block;
+    }
+    #nav-bar{
+      display: none;
+    }
   }
